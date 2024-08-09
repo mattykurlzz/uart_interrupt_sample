@@ -52,3 +52,5 @@ Mkfile.old
 dkms.conf
 .MultiCore_Configuration_Debug/
 .MultiCore_Configuration_Release/
+MultiCore_Configuration_Debug/
+MultiCore_Configuration_Release/
