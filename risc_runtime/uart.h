@@ -103,27 +103,47 @@ extern "C" {
 //
 // config uart
 //
-void uart_config(int id, unsigned long baud);
+void 			uart_config(int id, unsigned long baud);
+
+//
+// register given string
+//
+void 			uart_register_output(const char* str);
+
+//
+// interruption handler for putchar
+//
+void 			uart_putchar_hnlr(int a);
+
+//
+// send string using interruptions
+//
+int 			uart_puts_num(const char* str, unsigned int num);
 
 //
 // send symbol
 //
-void uart_putchar (int id, short c);
+void 			uart_putchar(int id, short c);
+
+//
+// send symbol for THREI
+//
+void 			uart_putchar_int(int id, short c);
 
 //
 // receive symbol
 //
-unsigned short uart_getchar (int id);
+unsigned short	uart_getchar(int id);
 
 //
 // Receve processor frequency
 //
-unsigned get_cpu_clock(void);
+unsigned 		get_cpu_clock(void);
 
 //
 // Check that the symbol is present in the uart.
 //
-unsigned short uart_testchar(int id);
+unsigned short 	uart_testchar(int id);
 
 #ifdef    __cplusplus
 }
